@@ -1,0 +1,317 @@
+/* --- ESTILOS GERAIS E DA PÁGINA PRINCIPAL --- */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Playfair Display', serif;
+    color: #333333;
+}
+
+body {
+    background-image: url(imagens/lavandas.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(253, 251, 247, 0.85);
+    z-index: -1;
+}
+
+/* Container da página principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    color: #7125ae;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: -10px;
+    color: #333;
+}
+
+.info {
+    margin: 40px 0;
+}
+
+.info h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.info h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 10px 0 0;
+}
+
+.botoes {
+    margin-top: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    border: 2px solid #7125ae;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #7125ae;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.botao:hover {
+    background-color: #c166f1 ;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(58, 42, 59, 0.4);
+}
+
+footer {
+    margin-top: 40px;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* --- ESTILOS DA NOVA PÁGINA DE PRESENTES --- */
+
+.container-presentes {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.presentes-header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #7125ae;
+    margin-bottom: 10px;
+}
+
+.presentes-header p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 15px 0;
+    flex-grow: 1;
+}
+
+.card .valor {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #7125ae;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+.pix-info {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+.chave-pix {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 1px dashed #B2B8A3;
+}
+
+.botao-voltar {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: 2px solid #333;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.botao-voltar:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* --- AJUSTES PARA CELULAR (RESPONSIVIDADE) --- */
+/* A Mágica acontece aqui! */
+@media (max-width: 768px) {
+
+    /* --- Página Principal (Mobile) --- */
+    .container {
+        padding: 15px; /* Menos espaçamento lateral */
+    }
+    header h1 {
+        font-size: 3.5rem; /* Fonte do nome do casal menor */
+    }
+    header p {
+        font-size: 1rem; /* Fonte do subtítulo menor */
+    }
+    .info {
+        margin: 30px 0; /* Menos margem vertical */
+    }
+    .info h2 {
+        font-size: 1.8rem; /* Fonte da data menor */
+    }
+    .info h3 {
+        font-size: 1.3rem; /* Fonte do horário menor */
+    }
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .botao {
+        width: 80%;
+        padding: 12px 20px; /* Botões ligeiramente menores */
+        font-size: 0.9rem;
+    }
+
+    /* --- Página de Presentes (Mobile) --- */
+    .container-presentes {
+        width: auto; /* Deixa o container mais flexível */
+        padding: 20px 15px; /* Menos padding */
+        margin: 20px 10px; /* Menos margem */
+    }
+    .presentes-header h1 {
+        font-size: 2.8rem; /* Título da página menor */
+    }
+    .presentes-header p {
+        font-size: 0.9rem; /* Texto de introdução menor */
+        margin-bottom: 30px;
+    }
+    .cards-container {
+        gap: 20px; /* Espaçamento entre os cards menor */
+        /* Para telas um pouco maiores que um celular na vertical, podemos usar 2 colunas */
+        grid-template-columns: 1fr;
+    }
+    .card {
+        padding: 20px; /* Padding interno do card menor */
+    }
+    .card img {
+        height: 140px; /* Imagem do card menor */
+        margin-bottom: 15px;
+    }
+    .card h3 {
+        font-size: 1.2rem; /* Título do card menor */
+    }
+    .card p {
+        font-size: 0.9rem; /* Descrição do card menor */
+    }
+    .card .valor {
+        font-size: 1.2rem; /* Valor do card menor */
+    }
+    .chave-pix {
+        font-size: 1rem; /* Fonte da chave pix menor */
+        padding: 8px 15px;
+    }
+}
+
+/* Opcional: Para telas muito pequenas, forçamos as fontes a serem ainda menores */
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    .presentes-header h1 {
+        font-size: 2.5rem;
+    }
+    .card h3 {
+        font-size: 1.1rem;
+    }
+}
